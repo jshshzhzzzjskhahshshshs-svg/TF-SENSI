@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <title>TF-SENSI | Toque mais preciso</title>
+  <style>
+    :root { --red:#ff2638; --bg:#080808; --panel:#141414; --muted:#b8b8b8; }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; font-family:Arial, Helvetica, sans-serif; color:#fff;
+      background:radial-gradient(ellipse at 50% 0%, #351015 0%, #10090a 36%, var(--bg) 72%);
+      min-height:100vh;
+    }
+    .wrap { width:min(920px, 100% - 32px); margin:auto; }
+    header { display:flex; align-items:center; justify-content:space-between; padding:22px 0; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:1px; }
+    .logo {
+      width:42px; height:42px; display:grid; place-items:center; border-radius:12px;
+      color:#fff; font-weight:1000; font-size:20px; background:linear-gradient(145deg,#ff3446,#8c0010);
+      box-shadow:0 0 22px #ff26384a;
+    }
+    .tag { color:#ff8992; font-size:12px; font-weight:bold; letter-spacing:2px; }
+    .hero { text-align:center; padding:48px 0 28px; }
+    .eyebrow { color:#ff6673; font-size:12px; font-weight:800; letter-spacing:3px; }
+    h1 { font-size:clamp(38px,8vw,68px); line-height:.98; margin:15px 0; font-weight:1000; }
+    h1 span { color:var(--red); text-shadow:0 0 28px #ff263855; }
+    .subtitle { color:#d0d0d0; max-width:600px; margin:0 auto; line-height:1.6; font-size:17px; }
+    .product { margin:34px auto; max-width:680px; padding:28px; border:1px solid #3b2427; border-radius:22px;
+      background:linear-gradient(145deg,#1b1113,#101010 65%); box-shadow:0 18px 60px #0009; }
+    .symbol { width:104px; height:104px; margin:0 auto 18px; display:grid; place-items:center;
+      border:2px solid #ff3547; border-radius:26px; color:white; font-size:42px; font-weight:1000;
+      background:linear-gradient(145deg,#e51d32,#59000b); box-shadow:0 0 35px #ff26384a; }
+    h2 { margin:8px 0; font-size:28px; }
+    .desc { color:var(--muted); line-height:1.55; }
+    .features { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin:24px 0; text-align:left; }
+    .feature { background:#0b0b0b; border:1px solid #292929; border-radius:13px; padding:14px; color:#eee; }
+    .feature b { display:block; margin-bottom:5px; color:#ff7a85; }
+    .devices { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:22px 0; }
+    .device { border:1px solid #494949; border-radius:999px; padding:10px 18px; color:#eee; background:#171717; }
+    .price { font-size:42px; font-weight:1000; margin:15px 0 3px; }
+    .price small { font-size:15px; color:#bbb; font-weight:500; }
+    .buy { display:block; width:100%; border:0; border-radius:13px; padding:17px 20px; margin-top:18px;
+      background:linear-gradient(90deg,#ff2638,#c90019); color:#fff; font-size:17px; font-weight:900;
+      cursor:pointer; box-shadow:0 8px 25px #ff263833; }
+    .buy:active { transform:scale(.99); }
+    .notice { margin:14px auto 0; max-width:520px; color:#aaa; font-size:12px; line-height:1.5; }
+    footer { text-align:center; color:#777; font-size:12px; padding:25px 0 35px; }
+    @media(max-width:520px) { .hero{padding-top:34px}.product{padding:22px 16px}.features{grid-template-columns:1fr 1fr}.subtitle{font-size:15px} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><div class="logo">PX</div><div>TF-SENSI<div class="tag">TOQUE SUAVE</div></div></div>
+      <div class="tag">PRODUTO DIGITAL</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">SINTA A DIFERENÇA NO TOQUE</div>
+        <h1>MAIS CONTROLE.<br><span>MAIS PRECISÃO.</span></h1>
+        <p class="subtitle">Conheça a TF-SENSI: um guia de ajustes para você personalizar a sensibilidade do seu celular e encontrar a configuração que combina com seu jeito de jogar.</p>
+      </section>
+
+      <section class="product">
+        <div class="symbol">PX</div>
+        <div class="eyebrow">TF-SENSI • EDIÇÃO MOBILE</div>
+        <h2>Toque Suave</h2>
+        <p class="desc">Ajustes e orientações para buscar um toque mais preciso no seu dispositivo.</p>
+        <div class="devices">
+          <span class="device"> iPhone</span>
+          <span class="device">Android</span>
+        </div>
+        <div class="features">
+          <div class="feature"><b>01 / Personalização</b>Encontre ajustes adequados ao seu aparelho.</div>
+          <div class="feature"><b>02 / Controle</b>Orientações para testar e adaptar a sensibilidade.</div>
+          <div class="feature"><b>03 / Praticidade</b>Conteúdo digital de consulta rápida.</div>
+          <div class="feature"><b>04 / Compatibilidade</b>Orientações para iPhone e Android.</div>
+        </div>
+        <div class="price">R$ 6,99 <small>pagamento único</small></div>
+        <button class="buy" onclick="checkout()">QUERO MINHA TF-SENSI</button>
+        <p class="notice">A compra ainda precisa ser conectada ao seu link de pagamento do Mercado Pago. O botão não cobra nem confirma pagamentos nesta versão. Os resultados variam conforme aparelho, jogo e preferências pessoais.</p>
+      </section>
+    </main>
+    <footer>© 2026 TF-SENSI • Produto digital independente</footer>
+  </div>
+  <script>
+    function checkout() {
+      alert("O site está pronto! Para receber os R$ 6,99, falta inserir o seu link de pagamento do Mercado Pago neste botão.");
+    }
+  </script>
+</body>
+</html>
